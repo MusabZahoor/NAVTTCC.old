@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Striped Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Collapses borders between cells */
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd; /* Adds a border to the bottom of cells */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Background for table headers */
+        }
+
+        /* Styles for alternating row colors */
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Light background for even rows */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff; /* White background for odd rows */
+        }
+
+        /* Optional: Hover effect for rows */
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>30</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>24</td>
+                <td>London</td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td>35</td>
+                <td>Paris</td>
+            </tr>
+            <tr>
+                <td>Diana</td>
+                <td>28</td>
+                <td>Tokyo</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>42</td>
+                <td>Sydney</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

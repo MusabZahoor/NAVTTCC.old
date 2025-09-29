@@ -1,0 +1,28 @@
+Position in CSS: 
+In line 
+Internal 
+External
+
+Types of lists
+order list 
+unorder list 
+descriptive list 
+
+Display flex ki by default direction
+Flex direction 
+setting div in x-axis 
+and also in y-axis
+--------------------
+Position
+div used to place content over another dive 
+by default position is static
+
+2 relative
+3 absolute
+4 sticky 
+5 fixed
+when we assign position to a div it will leave its original position 
+position tsk
+
+font-awesome cdn
+cdn = custom => external library
