@@ -122,35 +122,40 @@
 // }
 // student.introduce();
 
-let user = {
-    name : "",
-    email : "",
-    password : "",
-    signup: ()=>{
-     user.name = prompt ("enter the user name");
-     user.email = prompt("enter the email");
-     user.password = prompt("enter the password");
-     console.log (`Welcome ${user.name}`)
-    },
-    signin : () =>{
-        let username = prompt("enter username");
-        let userpassword = prompt("enter password");
-    if (username == user.name && userpassword == user.password){
-        console.log(`Welcome ${user.name} you have login`)
+// let user = {
+//     name : "",
+//     email : "",
+//     password : "",
+//     signup: ()=>{
+//      user.name = prompt ("enter the user name");
+//      user.email = prompt("enter the email");
+//      user.password = prompt("enter the password");
+//      console.log (`Welcome ${user.name}`)
+//     },
+//     signin : () =>{
+//         let username = prompt("enter username");
+//         let userpassword = prompt("enter password");
+//     if (username == user.name && userpassword == user.password){
+//         console.log(`Welcome ${user.name} you have login`)
 
-    }
-    else{
-        console.log(`Please enter valid username and password`)
-    };
-    },
-};
-let userchoise = prompt("enter signin or signup");
-if(userchoise == "signup"){
-    user.signup()
-} else if(userchoise == "signin"){
-    user.signin()
-}else{
-    console.log("invalid choise please try again")
+//     }
+//     else{
+//         console.log(`Please enter valid username and password`)
+//     };
+//     },
+// };
+// let userchoise = prompt("enter signin or signup");
+// if(userchoise == "signup"){
+//     user.signup()
+// } else if(userchoise == "signin"){
+//     user.signin()
+// }else{
+//     console.log("invalid choise please try again")
+// }
+
+let i = 10
+for ( j = 0; j <= 10; j++){
+    console.log(j)
 }
 </script>
 </body>
