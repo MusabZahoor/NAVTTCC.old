@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-<!--
+  </head>
+  <body>
+    <!--
     <button onclick= " add (23,15)">Add</button>
     -->
 
     <script>
-       /* function add (numOne, numTwo){
+      /* function add (numOne, numTwo){
             console.log(numOne+numTwo);
             
         }
@@ -39,7 +39,7 @@
 
         */
 
-     /*   const add = (numOne, numTwo) => {
+      /*   const add = (numOne, numTwo) => {
             document.write(numOne + numTwo)
         };
 
@@ -58,105 +58,99 @@
         })
         */
 
-//        let product = ["Bat", "Ball", "Hockey"]
-//        console.log(product)
-//        let productResult = product.map((n)=>n.toLocaleLowerCase());
-// /*       for (i = 0 ; i < product.length; i++){
-//             console.log(product[i].toLocaleLowerCase());
-//        }
-//             */
+      //        let product = ["Bat", "Ball", "Hockey"]
+      //        console.log(product)
+      //        let productResult = product.map((n)=>n.toLocaleLowerCase());
+      // /*       for (i = 0 ; i < product.length; i++){
+      //             console.log(product[i].toLocaleLowerCase());
+      //        }
+      //             */
 
-//        let getProduct = prompt ("Enter your product");
-//        let result = getProduct.toLocaleLowerCase();
+      //        let getProduct = prompt ("Enter your product");
+      //        let result = getProduct.toLocaleLowerCase();
 
-//        if (productResult.includes(result)){
-//         console.log("Product added to the card")
-//        }else{
-//         console.log("Wrong product selected")
-//        };
+      //        if (productResult.includes(result)){
+      //         console.log("Product added to the card")
+      //        }else{
+      //         console.log("Wrong product selected")
+      //        };
 
-// let product = ["Laptop", "Mobile", "Tablet", "Watch"];
-// console.log(product);
-// let pushResult = product.push("Charger");
-// console.log(pushResult);
+      // let product = ["Laptop", "Mobile", "Tablet", "Watch"];
+      // console.log(product);
+      // let pushResult = product.push("Charger");
+      // console.log(pushResult);
 
-// let product = [1,2,3,4,5,6,7,8,9,10];
-// let result = product.filter((n)=> n % 2 === 0)
-// console.log(result);
-// console.log(product)
+      // let product = [1,2,3,4,5,6,7,8,9,10];
+      // let result = product.filter((n)=> n % 2 === 0)
+      // console.log(result);
+      // console.log(product)
 
-// let obj = {
-//     name : "XYZ",
-//     email : "abc@abc.com",
+      // let obj = {
+      //     name : "XYZ",
+      //     email : "abc@abc.com",
 
-// }
-// console.log (obj);
+      // }
+      // console.log (obj);
 
-// obj.name = "ABC";   // update value
+      // obj.name = "ABC";   // update value
 
-// console.log(obj);
+      // console.log(obj);
 
-// obj.age = 15;       // Add property
+      // obj.age = 15;       // Add property
 
-// console.log(obj);
+      // console.log(obj);
 
-// delete obj.age;     // Delete property
+      // delete obj.age;     // Delete property
 
-//  console.log (obj)
+      //  console.log (obj)
 
-// let user = {
-//     name : "Abc",
-//      great : function(){
-//         console.log(`Welcome used ${this.name}`)
+      // let user = {
+      //     name : "Abc",
+      //      great : function(){
+      //         console.log(`Welcome used ${this.name}`)
 
-//     }
-// }
-// user.great (); 
+      //     }
+      // }
+      // user.great ();
 
-// let student = {
-//     name : "DEF",
-//     age : 16,
-//     introduce : ()=>{
-//         console.log (`Welcome user ${student.name}, you age is ${student.age}`)
-//     }
-// }
-// student.introduce();
+      // let student = {
+      //     name : "DEF",
+      //     age : 16,
+      //     introduce : ()=>{
+      //         console.log (`Welcome user ${student.name}, you age is ${student.age}`)
+      //     }
+      // }
+      // student.introduce();
 
-// let user = {
-//     name : "",
-//     email : "",
-//     password : "",
-//     signup: ()=>{
-//      user.name = prompt ("enter the user name");
-//      user.email = prompt("enter the email");
-//      user.password = prompt("enter the password");
-//      console.log (`Welcome ${user.name}`)
-//     },
-//     signin : () =>{
-//         let username = prompt("enter username");
-//         let userpassword = prompt("enter password");
-//     if (username == user.name && userpassword == user.password){
-//         console.log(`Welcome ${user.name} you have login`)
+      let user = {
+        name: "",
+        email: "",
+        password: "",
 
-//     }
-//     else{
-//         console.log(`Please enter valid username and password`)
-//     };
-//     },
-// };
-// let userchoise = prompt("enter signin or signup");
-// if(userchoise == "signup"){
-//     user.signup()
-// } else if(userchoise == "signin"){
-//     user.signin()
-// }else{
-//     console.log("invalid choise please try again")
-// }
-
-let i = 10
-for ( j = 0; j <= 10; j++){
-    console.log(j)
-}
-</script>
-</body>
+        signup: () => {
+          user.name = prompt("enter the user name");
+          user.email = prompt("enter the email");
+          user.password = prompt("enter the password");
+          console.log(`Welcome ${user.name}`);
+        },
+        signin: () => {
+          let username = prompt("enter username");
+          let userpassword = prompt("enter password");
+          if (username == user.name && userpassword == user.password) {
+            console.log(`Welcome ${user.name} you have login`);
+          } else {
+            console.log(`Please enter valid username and password`);
+          }
+        },
+      };
+      let userchoise = prompt("enter signin or signup");
+      if (userchoise == "signup") {
+        user.signup();
+      } else if (userchoise == "signin") {
+        user.signin();
+      } else {
+        console.log("invalid choise please try again");
+      }
+    </script>
+  </body>
 </html>

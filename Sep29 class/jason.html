@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1 id="h1">Text of DOM page</h1>
+    <p id="p">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, ut dolor aut
+      assumenda, provident fuga consectetur quam quod id ullam at eius. Tempore
+      ex suscipit distinctio dolores quidem? Ex, totam.
+    </p>
+    <strong id="Bold">Bold text</strong> -->
+    <!-- <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit libero
+      consectetur perspiciatis iusto ratione tempore placeat repellendus ad
+      mollitia fugiat quibusdam rerum, sunt harum dicta distinctio, nam aut
+      necessitatibus nostrum.
+    </p>
+    <script>
+      //   let obj = {
+      //     name: "abc",
+      //     age: 23,
+      //     email: "abc@abc.co",
+      //   };
+      //   console.log(obj);
+      //   let newObj = JSON.stringify(obj);
+      //   console.log(newObj);
+
+      //   let newObject = `{
+      //     "name" : "abc",
+      //     "age" : 24
+      //     }`;
+      //   console.log(newObject);
+      //   let newOBject = JSON.parse(newObject);
+      //   console.log(newOBject);
+
+      //   let heading = document.getElementById("h1");
+      //   console.log(heading.textContent);
+      //   let byTag = document.getElementsByTagName("p");
+      //   console.log(byTag[0].textContent);
+
+      //   let bold = document.getElementById("Bold");
+      //   console.log(bold.textContent);
+      //   let changeBold = (bold.textContent = "This is bold text");
+      //   console.log(changeBold);
+      //   let colorHeading = (heading.style.background = "green");
+      //   console.log(colorHeading);
+      let pgraph = document.querySelector("p");
+      pgraph.innerHTML = "<b>This is bold</b>";
+      console.log(pgraph.innerText);
+      console.log(pgraph.innerHTML);
+    </script> -->
+
+    <p>hello</p>
+    <button onclick="changeDark()">Dark me</button>
+    <button onclick="changeLight()">Light me</button>
+    <button onclick="toggle()">Toggle Button</button>
+    <script>
+      const changeDark = () => {
+        let bgcolor = document.querySelector("body");
+        dark = bgcolor.style.background = "black";
+        return dark;
+      };
+      const changeLight = () => {
+        let bgcolor = document.querySelector("body");
+        dark = bgcolor.style.background = "white";
+        return dark;
+      };
+
+      const toggle = () => {
+        let bgcolor = document.querySelector("body");
+        if (bgcolor.style.background == "white") {
+          dark = bgcolor.style.background = "black";
+          return dark;
+        } else {
+          white = bgcolor.style.background = "white";
+          return white;
+        }
+      };
+    </script>
+  </body>
+</html>
