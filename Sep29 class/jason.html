@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style></style>
   <body>
     <!-- <h1 id="h1">Text of DOM page</h1>
     <p id="p">
@@ -55,8 +56,8 @@
     </script> -->
 
     <p>hello</p>
-    <button onclick="changeDark()">Dark me</button>
-    <button onclick="changeLight()">Light me</button>
+    <!-- <button onclick="changeDark()">Dark me</button>
+    <button onclick="changeLight()">Light me</button> -->
     <button onclick="toggle()">Toggle Button</button>
     <script>
       const changeDark = () => {
@@ -80,6 +81,9 @@
           return white;
         }
       };
+      let button = document.querySelector("button");
+      button.style.background = "red";
+      button.style.color = "white";
     </script>
   </body>
 </html>

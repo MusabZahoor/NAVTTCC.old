@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img />
+    <button onclick="getPic()">Get Image</button>
+  </body>
+  <script>
+    const getPic = () => {
+      let image = document.querySelector("img");
+      image.setAttribute("src", "./img.jpg");
+      image.setAttribute("alt", "image");
+      image.style.width = "30%";
+    };
+
+    fetch("https://dummyjson.com/users")
+      .then((resp) => resp.json())
+      .then((data) => {
+        let userData = data.users;
+        userData.forEach((user) => {
+          console.log(`Age is ${user.age} and Gender is ${user.gender}`);
+        });
+      });
+  </script>
+</html>

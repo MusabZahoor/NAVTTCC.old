@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="addData" onclick="dataAdd()">Add data</button>
+    <button id="removeData" onclick="dataRemove()">Remove data</button>
+  </body>
+  <script>
+    const dataAdd = () => {
+      let divcontainer = document.createElement("div");
+      let bodytext = document.querySelector("body");
+      let heading = document.createElement("h1");
+      let pra = document.createElement("p");
+      heading.textContent = "Heading";
+      pra.textContent = "I'm a paragraph";
+      bodytext.appendChild(divcontainer);
+      divcontainer.appendChild(heading);
+      divcontainer.appendChild(pra);
+      divcontainer.style.background = "aqua";
+    };
+    const dataRemove = () => {
+      let heading = document.querySelector("h1");
+      let pra = document.querySelector("p");
+
+      heading.remove();
+      pra.remove();
+    };
+  </script>
+</html>

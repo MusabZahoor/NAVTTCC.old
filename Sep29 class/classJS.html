@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .para {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <p>i am a para</p>
+    <button onclick="addClass()">Add Class</button>
+    <button onclick="remClass()">Remove Div Class</button>
+    <button onclick="toggleClass()">Toggle Class</button>
+  </body>
+  <script>
+    let divTag = document.querySelector("div");
+    const addClass = () => {
+      divTag.classList.add("oneDiv");
+      console.log(divTag);
+    };
+    const remClass = () => {
+      divTag.classList.remove("oneDiv");
+      console.log(divTag);
+    };
+    let toggleClass = () => {
+      let para = document.querySelector("p");
+      para.classList.toggle("para");
+    };
+  </script>
+</html>
