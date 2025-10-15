@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #parent {
+      background-color: black;
+      height: 300px;
+      width: 200px;
+    }
+  </style>
+  <body>
+    <div id="parent">
+      <button id="button">Click Me</button>
+    </div>
+
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+  </body>
+  <script>
+    let parentContainer = document.getElementById("parent");
+    let btn = document.getElementById("button");
+    let listParent = document.querySelector("ul");
+    listParent.addEventListener("click", (e) => {
+      console.log(e.target.textContent);
+    });
+    parentContainer.addEventListener("click", () => {
+      alert("parent clicked");
+    });
+    btn.addEventListener("click", () => {
+      alert("child is clicked");
+      event.stopPropagation();
+    });
+  </script>
+</html>

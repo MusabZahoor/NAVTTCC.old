@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Remove Event</title>
+  </head>
+  <body>
+    <button>Click Me</button>
+  </body>
+  <script>
+    let btn = document.querySelector("button");
+    let sayHi = () => alert("Hi!");
+    btn.addEventListener("click", sayHi);
+    setTimeout(() => {
+      btn.removeEventListener("click", sayHi);
+      console.log("Event Removed");
+    }, 3000);
+  </script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="textFild" type="text" placeholder="Enter you list item" />
+    <button id="button">Add Item to list</button>
+    <ul></ul>
+  </body>
+  <script>
+    let inputText = document.querySelector("input");
+    let btn = document.querySelector("button");
+    let list = document.querySelector("ul");
+    btn.addEventListener("click", (e) => {
+      let newInputText = inputText.value.trim();
+      if (newInputText == "") {
+        alert("field can't be empty");
+        return;
+      }
+      let listItem = document.createElement("li");
+      listItem.textContent = newInputText;
+      list.appendChild(listItem);
+      inputText.value = "";
+    });
+
+    
+  </script>
+</html>
