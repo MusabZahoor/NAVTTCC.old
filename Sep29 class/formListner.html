@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="formOne" name="formOne">
+      <input type="text" id="Name" placeholder="Enter your name" />
+      <input type="email" id="email" placeholder="Enter your email" />
+      <input type="password" placeholder="Enter your password" id="password" />
+      <input type="submit" name="Submit form" id="submitForm" />
+    </form>
+  </body>
+  <script>
+    let formData = document.getElementById("formOne");
+    formData.addEventListener("submit", (event) => {
+      event.preventDefault();
+      let formName = document.getElementById("Name").value;
+      let formname = formName.trim();
+      let formEmail = document.getElementById("email").value;
+      let formemail = formEmail.trim();
+      let formPassword = document.getElementById("password").value;
+      let formpassword = formPassword.trim();
+      if (formname === "" || formemail === "" || formpassword === "") {
+        alert("field data is mandatory");
+      } else {
+        alert("form data submited successfully");
+      }
+    });
+  </script>
+</html>

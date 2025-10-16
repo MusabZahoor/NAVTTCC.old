@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <input type="text" id="useremail" />
+      <input type="text" id="password" />
+      <input type="submit" id="submit" />
+    </form>
+  </body>
+  <script>
+    let formData = document.getElementById("form");
+    formData.addEventListener("submit", (event) => {
+      event.preventDefault();
+      let pattren = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      let passPattren = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{10,}$/;
+
+      let useremail = document.getElementById("useremail").value;
+      let userEmail = useremail.trim();
+
+      let userpassword = document.getElementById("password").value;
+      let userPassword = userpassword.trim();
+      if (passPattren.test(userPassword) && pattren.test(userEmail)) {
+        alert("valid");
+      } else {
+        alert("invalid");
+      }
+    });
+  </script>
+</html>

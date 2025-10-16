@@ -14,10 +14,10 @@
     let inputText = document.querySelector("input");
     let btn = document.querySelector("button");
     let list = document.querySelector("ul");
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click", () => {
       let newInputText = inputText.value.trim();
-      if (newInputText == "") {
-        alert("field can't be empty");
+      if (newInputText === "") {
+        alert("Field can't be empty");
         return;
       }
       let listItem = document.createElement("li");
@@ -25,7 +25,25 @@
       list.appendChild(listItem);
       inputText.value = "";
     });
-
-    
+    list.addEventListener("click", (e) => {
+      if (e.target.tagName === "LI") {
+        let action = prompt(
+          "Choose an option:\n1. Delete\n2. Update",
+          "Type 1 or 2"
+        );
+        if (action === "1") {
+          e.target.remove();
+        } else if (action === "2") {
+          let newValue = prompt("Enter new value:", e.target.textContent);
+          if (newValue !== null && newValue.trim() !== "") {
+            e.target.textContent = newValue.trim();
+          } else {
+            alert("Value not updated (empty input).");
+          }
+        } else {
+          alert("Invalid option. Please type 1 for Delete or 2 for Update.");
+        }
+      }
+    });
   </script>
 </html>
