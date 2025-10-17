@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" placeholder="enter user name" id="userName" />
+      <input type="text" placeholder="enter your email" id="email" />
+      <input type="submit" id="btn" />
+    </form>
+  </body>
+  <script>
+    let userName = document.getElementById("userName");
+    let userEmail = document.getElementById("email");
+    let btnSubmit = document.getElementById("btn");
+    btnSubmit.addEventListener("click", () => {
+      let useremail = userEmail.value.trim();
+      let username = userName.value.trim();
+      if ((useremail && username) == "") {
+        alert("all fields required");
+      } else {
+        alert("data looks good");
+      }
+    });
+  </script>
+</html>

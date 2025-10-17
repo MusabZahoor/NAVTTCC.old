@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter user name" id="user" />
+    <p id="userError"></p>
+
+    <input type="text" placeholder="Enter your email" id="email" />
+    <p id="emailError"></p>
+
+    <input type="text" placeholder="Enter your password" id="pass" />
+    <p id="passEror"></p>
+  </body>
+  <script>
+    let userName = document.getElementById("user");
+    let userError = document.getElementById("userError");
+    userName.addEventListener("input", () => {
+      if (userName.value.trim().length < 5) {
+        userError.textContent = "User name is too short";
+        userError.style.color = "red";
+      } else {
+        userError.textContent = "User name looks good";
+        userError.style.color = "green";
+      }
+    });
+
+    let userEmail = document.getElementById("email");
+    let emailError = document.getElementById("emailError");
+    userEmail.addEventListener("input", () => {
+      let pattren = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      let emailLength = userEmail.value.trim();
+      if (pattren.test(emailLength)) {
+        emailError.textContent = "Email looks good";
+        emailError.style.color = "green";
+      } else {
+        emailError.textContent = "Email looks not valid";
+        emailError.style.color = "red";
+      }
+    });
+
+    let userPassword = document.getElementById("pass");
+    let passError = document.getElementById("passEror");
+
+    userPassword.addEventListener("input", () => {
+      let passPattren = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{10,}$/;
+      let passLength = userPassword.value.trim();
+
+      if (passPattren.test(passLength)) {
+        passError.textContent = "correct password";
+        passError.style.color = "green";
+      } else {
+        passError.textContent = "incorrect password";
+        passError.style.color = "red";
+      }
+    });
+  </script>
+</html>
