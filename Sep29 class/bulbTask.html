@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="./off bulb.jpg" alt="" id="bulb" />
+    <button id="bulbbtn">click</button>
+  </body>
+  <script>
+    let bulbbody = document.querySelector("body");
+    let bulbBtn = document.getElementById("bulbbtn");
+    let bulbImg = document.getElementById("bulb");
+    bulbImg.style.width = "150px";
+    let isLightOn = false;
+
+    if ((isLightOn = false)) {
+      bulbImg.src = "./on bulb.jpg";
+      bulbBtn.textContent = "Turn off";
+    } else {
+      bulbImg.src = "./off bulb.jpg";
+      bulbBtn.textContent = "Turn on";
+    }
+  </script>
+</html>
