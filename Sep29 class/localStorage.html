@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <input type="text" id="username" />
+    <button id="saveData">Save in local storage</button>
+    <button id="showData">Show on web page</button>
+    <button id="localStorage">Clear Local Storage</button>
+    <h3 id="h3Data"></h3>
+  </body>
+  <script>
+    let userName = document.getElementById("username");
+    let saveBTN = document.getElementById("saveData");
+    let showBTN = document.getElementById("showData");
+    let clearBTN = document.getElementById("localStorage");
+    let showData = document.getElementById("h3Data");
+
+    saveBTN.addEventListener("click", () => {
+      if (userName.value == "") {
+        alert("Enter Data First");
+      } else {
+        localStorage.setItem("User", userName.value);
+        alert("User data saved in local storage");
+      }
+    });
+
+    showBTN.addEventListener("click", () => {
+      let getData = localStorage.getItem("User");
+      getData ? (showData.textContent = getData) : alert("Enter data first");
+    });
+
+    clearBTN.addEventListener("click", () => {
+      let getData = localStorage.getItem("User");
+      if (getData) {
+        localStorage.removeItem("User");
+        showData.innerText = "";
+        userName.value = "";
+        alert("User has been removed from local storage");
+      } else {
+        alert("No user found on local storage");
+      }
+    });
+
+    // let student = {
+    //   id: 1,
+    //   name: "ABC",
+    //   age: 25,
+    // };
+    // localStorage.setItem("Students", JSON.stringify(student));
+    // const data = localStorage.getItem("Students");
+    // console.log(JSON.parse(data));
+    // localStorage.clear();
+  </script>
+</html>

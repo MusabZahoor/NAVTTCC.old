@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // let savedUsername = "admin";
+    // let savedPassword = "12345";
+
+    // let enteredUsername = prompt("Enter your username:");
+    // let enteredPassword = prompt("Enter your password:");
+
+    // if (
+    //   enteredUsername === savedUsername &&
+    //   enteredPassword === savedPassword
+    // ) {
+    //   console.log("Login Successful");
+    //   alert("Login Successful");
+    // } else if (
+    //   enteredUsername === savedUsername &&
+    //   enteredPassword !== savedPassword
+    // ) {
+    //   console.log("Incorrect Password");
+    //   alert("Incorrect Password");
+    // } else if (
+    //   enteredUsername !== savedUsername &&
+    //   enteredPassword === savedPassword
+    // ) {
+    //   console.log("Incorrect Username");
+    //   alert("Incorrect Username");
+    // } else {
+    //   console.log("Access Denied");
+    //   alert("Access Denied");
+    // }
+
+    for (let i = 1; i <= 50; i++) {
+      if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+      } else if (i % 3 === 0) {
+        console.log("Fizz");
+      } else if (i % 5 === 0) {
+        console.log("Buzz");
+      } else {
+        console.log(i);
+      }
+    }
+  </script>
+</html>

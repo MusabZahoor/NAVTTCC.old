@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Cart (DOM Example)</title>
+    <title>Product Cart</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -141,14 +141,14 @@
 
           const decreaseBtn = document.createElement("button");
           decreaseBtn.classList.add("btn", "btn-warning", "btn-sm");
-          decreaseBtn.textContent = "Decrease";
+          decreaseBtn.textContent = "Decrease (-)";
           decreaseBtn.addEventListener("click", () =>
             decreaseQuantity(item.id)
           );
 
           const increaseBtn = document.createElement("button");
           increaseBtn.classList.add("btn", "btn-success", "btn-sm", "ms-2");
-          increaseBtn.textContent = "Increase";
+          increaseBtn.textContent = "Increase (+)";
           increaseBtn.addEventListener("click", () =>
             increaseQuantity(item.id)
           );
